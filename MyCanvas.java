@@ -21,6 +21,7 @@ import paint.controller.DrawingEngine;
 import paint.controller.PaintControl;
 import paint.model.Rectangle;
 import static paint.view.MyCanvas.shapesList;
+import paint.controller.PaintControl;
 
 /**
  *
@@ -192,7 +193,7 @@ private int x1,x2,y1,y2;
             {
                 if (s.getPosition()== new Point(x1,y1))
                    
-                //if(shapetodraw==null) return;
+                if(supportedshapes==null) return;
            {    int x2 = e.getX();
                int y2 = e.getY();
                s.setPosition(new Point(x2,y2));
@@ -204,9 +205,9 @@ private int x1,x2,y1,y2;
                int min=Math.min(height,width);
                properties.put(" diameter ",new Double(min));
                properties.put("side length",new Double(min));
-               s.setProperties(properties);
-               //shapetodraw=null;
-               //controllerref.setmemento();
+               //s.setProperties(properties);
+               supportedshapes=null;
+               //controllerRef.setmemento();
                c.repaint(); 
                 }
                         
@@ -224,22 +225,22 @@ private int x1,x2,y1,y2;
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
         
 }
